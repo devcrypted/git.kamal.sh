@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-const GITHUB_USERNAME = process.env.GITHUB_USERNAME || 'devdatabase';
+const GITHUB_USERNAME = process.env.GITHUB_USERNAME || 'devcrypted';
 const GITHUB_API = `https://api.github.com/users/${GITHUB_USERNAME}/repos`;
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || '';
 
@@ -52,7 +52,7 @@ export default {
         const url = new URL(request.url);
         const repoName = url.pathname.substring(1).toLowerCase();
         if (repoName == "") {
-            return new Response('200 OK', { status: 200 });
+            return Response.redirect('https://github.com/devcrypted?tab=repositories', 301);
         }
         const targetUrl = repoCache[repoName];
 
