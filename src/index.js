@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-const GITHUB_USERNAME = process.env.GITHUB_USERNAME || 'aworkaround';
+const GITHUB_USERNAME = process.env.GITHUB_USERNAME || 'devdatabase';
 const GITHUB_API = `https://api.github.com/users/${GITHUB_USERNAME}/repos`;
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || '';
 
